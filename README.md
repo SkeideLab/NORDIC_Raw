@@ -2,7 +2,18 @@
 Matlab code for performing image reconstruction in MRI and performing the NORDIC denoising
 
 
-# Overview
+# Overview - HOW TO RUN FORK
+
+- why: denoise functional fmri images before preprocessing
+- needed: functional magnitude and phase images (should be named the identically except `_part-phase_` in phase images)
+- result: magnitude images with `NORDIC` in the bids `_acq-*_` field (old acq info is lost)
+- TO RUN: 
+   - change paths in ``run_nordic.sh`` and `apply_nordic.m`
+   - run `sbatch run_nordic.sh`
+   - add accompanying json files (manually): copy the previous magnitude file's json
+
+
+# Overview 
 The two files NORDIC and NIFTI_NORDIC perform similar concepts, locally low-rank denoising.
 Both approaches, uses a g-factor map to flatten the noise, and a noise-scan for estimating the homoegenous noise.
 For NORDIC, the noise-scan and the g-factor are explicit constructions provided as the last elements in a 4D array.
