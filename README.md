@@ -5,7 +5,7 @@ Matlab code for performing image reconstruction in MRI and performing the NORDIC
 # Overview - HOW TO RUN FORK
 
 - why: denoise functional fmri images before preprocessing
-- needed: functional magnitude and phase images (should be named the identically except `_part-phase_` in phase images)
+- needed: functional magnitude and phase images in BIDS format (should be named identically except `_part-phase_` in phase images)
 - result: magnitude images with `NORDIC` in the bids `_acq-*_` field (old acq info is lost)
 - TO RUN: 
    - change paths in ``run_nordic.sh`` and `apply_nordic.m`
