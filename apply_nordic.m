@@ -1,5 +1,6 @@
 % go through phase images in folder
-imgs_path='/ptmp/<user>/bids_template_local/sub-test1/ses-pilot/func/sub-test1_ses-pilot_task-EMPRISEharvey_acq-1p5TE24TR2100iPAT3FS_run-*_part-phase_bold.nii.gz'
+% specify all phase images in one path using wildcard *
+imgs_path='/<path>/sub-test1/ses-pilot/func/sub-test1_ses-pilot_task-task1_run-*_part-phase_bold.nii.gz'
 
 phase_imgs=dir(imgs_path)
 disp(phase_imgs)
